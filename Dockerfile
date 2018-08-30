@@ -1,5 +1,5 @@
-FROM google/cloud-sdk
-MAINTAINER Andreas Leicher <email@andreasleicher.com>
+FROM google/cloud-sdk:214.0.0
+LABEL maintainer="Andreas Leicher <email@andreasleicher.com>"
 
 # install pip
 RUN apt-get update && apt-get install -y python-pip git
