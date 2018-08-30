@@ -2,7 +2,7 @@ FROM google/cloud-sdk:214.0.0
 LABEL maintainer="Andreas Leicher <email@andreasleicher.com>"
 
 # install pip
-RUN apt-get update && apt-get install -y python-pip git
+RUN apt-get update && apt-get install -y --no-install-recommends python-pip git && rm -rf /var/lib/apt/lists/*
 
 ENV SOPS_VERSION="3.0.4"
 
